@@ -1,0 +1,15 @@
+# Reading shapefiles
+geopandas
+pyogrio
+
+# Numerical analysis
+pandas
+numpy
+
+# Geographical analysis
+geopy
+
+# Showing plots and maps
+mapclassify
+matplotlib
+folium
