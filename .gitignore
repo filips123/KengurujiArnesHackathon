@@ -110,7 +110,8 @@ node_modules/
 web_modules/
 
 # Original dataset files
-EL_VISINSKETOCKE_T.*
+flooding/sources/*
+!flooding/sources/metadata.xml
 
 # Do not ignore .gitkeep files
 !.gitkeep
