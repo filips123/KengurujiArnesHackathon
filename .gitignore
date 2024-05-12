@@ -110,7 +110,7 @@ node_modules/
 web_modules/
 
 # Original dataset files
-EL_VISINSKETOCKE_T
+EL_VISINSKETOCKE_T.*
 
 # Do not ignore .gitkeep files
 !.gitkeep
