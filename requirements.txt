@@ -1,0 +1,27 @@
+# Reading shapefiles
+geopandas
+pyogrio
+
+# Numerical analysis
+pandas
+numpy
+
+# Geographical analysis
+geopy
+
+# Machine learning
+scikit-learn
+torch
+shap
+tqdm
+joblib
+
+# Showing plots and maps
+mapclassify
+matplotlib
+folium
+
+# Backend
+SQLAlchemy
+Flask
+requests
