@@ -111,7 +111,7 @@ def train_model(target_gauge_id, predict_next_hours):
 
     # Create models directory
     directory = f"../models/simple/{target_gauge_id}"
-    os.makedirs(directory)
+    os.makedirs(directory, exist_ok=True)
 
     # Save the scaler
     dump(scaler, f"{directory}/{predict_next_hours}.bin", compress=True)
@@ -128,8 +128,12 @@ def main():
     print("TRAINING MODELS\n")
 
     for file in Path("../dataset/hydro/aggregated").glob("*.csv"):
-        target_gauge_id = int(file.name.replace(".csv", ""))
-        train_model(target_gauge_id, predict_next_hours)
+        try:
+            target_gauge_id = int(file.name.replace(".csv", ""))
+            train_model(target_gauge_id, predict_next_hours)
+        except Exception as error:
+            print("Error:", error)
+            print()
 
 
 main()

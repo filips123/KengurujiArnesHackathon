@@ -55,8 +55,12 @@ def main():
     print("PREPARING DATA\n")
 
     for file in Path("../dataset/hydro/aggregated").glob("*.csv"):
-        target_gauge_id = int(file.name.replace(".csv", ""))
-        prepare_data(target_gauge_id, predict_next_hours)
+        try:
+            target_gauge_id = int(file.name.replace(".csv", ""))
+            prepare_data(target_gauge_id, predict_next_hours)
+        except Exception as error:
+            print("Error:", error)
+            print()
 
 
 main()
