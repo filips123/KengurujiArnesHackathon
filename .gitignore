@@ -108,7 +108,12 @@ jspm_packages/
 node_modules/
 web_modules/
 
+# Datasets & Models
+dataset/processed/
+models/
+
+# Database
+*.db
+
 # Do not ignore .gitkeep files
 !.gitkeep
-
-config.py
